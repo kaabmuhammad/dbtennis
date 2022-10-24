@@ -1,13 +1,8 @@
 import psycopg2
 
-#connect to db
+# connect to db
 con = psycopg2.connect(
-    host = "localhost",
-    dbname = "postgres",
-    user = "postgres",
-    password = "postgres",
-    port=5432
-
+    host="localhost", dbname="postgres", user="postgres", password="postgres", port=5432
 )
 
 cur = con.cursor()
@@ -20,5 +15,5 @@ for r in rows:
     print(r)
 
 cur.close()
-#close the coonection
+# close the coonection
 con.close()
